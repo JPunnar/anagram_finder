@@ -7,6 +7,7 @@ file.each_line do |word|
   word.strip!
   dict[word.chars.sort.join] << word
 end
+file.close
 
 anagrams = dict[ARGV.last.chars.sort.join] - [ARGV.last]
 
